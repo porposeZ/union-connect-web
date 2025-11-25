@@ -41,12 +41,19 @@ export function ArticlesPage({ articles }: ArticlesPageProps) {
       <h1>Список статей</h1>
 
 
-      {filteredArticles.map((article) => (
-        <div key={article.id}>
-          <h2>{article.title}</h2>
-          <p>статус: {ArticlesStatusMap[article.status]}</p>
-        </div>
-      ))}
+        {filteredArticles.length === 0 ? (
+          <p>Статьи не найдены</p>
+        ) : (
+          <ul>
+            {filteredArticles.map((article) => (
+              <li key={article.id}>
+                {article.title} - {ArticlesStatusMap[article.status]}
+              </li>
+            ))}
+          </ul>
+        )}
+
+
     </div>
   );
 }
