@@ -69,7 +69,6 @@ export interface Category {
 export type ArticleStatus = "actual" | "partially_outdated" | "needs_update"
 
 export interface Article {
-    [x: string]: any;
     id: string
     title: string
     applicationId?: string
