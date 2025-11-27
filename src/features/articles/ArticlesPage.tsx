@@ -35,20 +35,22 @@ export function ArticlesPage({ articles }: ArticlesPageProps) {
   });
 
   return (
-    <div>
-      <select
+    <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-black">
+      <div className="flex min-w-12 justify-center columns-1"> 
+
+      <select className="border border-blue-600"
         value={statusFilter}
         onChange={(event) => {
           setStatusFilter(event.target.value as StatusFilter);
         }}
-      >
+        >
         <option value="all">Все статусы</option>
         <option value="actual">Актуально</option>
         <option value="needs_update">Требуется обновление</option>
         <option value="partially_outdated">Устарело</option>
       </select>
 
-      <input
+      <input className="border border-black border-2"
         type="text"
         value={searchQuery}
         placeholder="Поиск по заголовку"
@@ -56,6 +58,7 @@ export function ArticlesPage({ articles }: ArticlesPageProps) {
           setSearchQuery(event.target.value);
         }}
       />
+        </div>
 
       <h1>Список статей</h1>
 
@@ -64,7 +67,8 @@ export function ArticlesPage({ articles }: ArticlesPageProps) {
       ) : (
         <ul>
           {filteredArticles.map((article) => (
-            <li key={article.id}>
+            <li className="bg-white rounded-lg border border-gray-300 p-4 shadow-sm hover:bg-slate-50 transition" 
+            key={article.id}>
               <Link href={`/articles/${article.id}`}>
               {article.title} 
               </Link>{" "}
