@@ -10,6 +10,13 @@ export default async function ArticlePage({
     if (!article) {
         return <div>Статья не найдена</div>;
     }
+
+
+
+
+
+
+    
     return (
   <div>
     <h1>{article.title}</h1>
