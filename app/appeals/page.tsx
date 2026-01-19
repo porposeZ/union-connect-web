@@ -22,11 +22,14 @@ export default function AppealsPage() {
           const messages = appealMessageMocks.filter(
             (m) => m.appealId === appeal.id
           );
-//pu
+
           return (
             <li key={appeal.id} className="rounded-lg border bg-white p-4">
               <Link href={`/appeals/${appeal.id}`} className="block space-y-1">
                 <div className="flex items-center justify-between">
+                  <span>
+                    Клиент: <span className="font-medium">{appeal.clientName}</span>
+                  </span>
                   <span className="font-medium">
                     #{appeal.number} — {appeal.theme}
                   </span>
