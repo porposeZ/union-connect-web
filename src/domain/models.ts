@@ -76,13 +76,14 @@ export interface Article {
     status: ArticleStatus 
     lastReviewedAt?: string
     currentVersionId: string
+    content?: string
 }
 
 export interface ArticleVersion {
     id: string
     articleId: string
-    appVersion?: string    // (для какой версии ПО актуально)
-    body: string           // (markdown)
+    appVersion?: string    
+    body: string           
     changeSummary?: string
     createdAt: string
     createdByUserId: string

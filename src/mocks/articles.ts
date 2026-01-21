@@ -13,12 +13,12 @@ export const articlesMocks: Article[] = [
     status: "actual",
     currentVersionId: "2",
 },
-{    id: "3",
+{   id: "3",
     title: "Фискальный регистратор",
     status: "partially_outdated",
     currentVersionId: "3",
 },
-{    id: "4",
+{   id: "4",
     title: "Онлайн касса",
     status: "needs_update",
     currentVersionId: "4",
@@ -152,4 +152,13 @@ export const appealMessageMocks: AppealMessage[] = [
     isInternal: false,
     authorType: "specialist",
   },
+  {
+    id: "m-7",
+    appealId: "2",
+    senderId: "client-2",
+    message: "THANKS APP STARTS WORKING",
+    createdAt: "18.12.2025 07:00",
+    isInternal: false,
+    authorType: "specialist",
+  }
 ];
