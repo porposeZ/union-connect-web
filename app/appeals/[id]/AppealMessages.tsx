@@ -13,6 +13,7 @@ export default function AppealMessages({appeal, messages}: AppealMessagesProps) 
         ? messages
         : messages.filter((m) => !m.isInternal)
 
+    
 
 
     return (
@@ -25,6 +26,7 @@ export default function AppealMessages({appeal, messages}: AppealMessagesProps) 
             >
                 {showInternal ? "Скрыть внутренние" : "Показать внутренние"}
             </button>
+
             <h2 className="mb-4 text-lg font-semibold">Сообщения:</h2>
             {visibleMessages.map((message) => (
                 <div key={message.id} className="mb-4 rounded-lg border bg-white p-4">
