@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { Article } from "../../domain/models";
-import LeftNav from "../../components/LeftNav";
 
 type ArticlesPageProps = {
   articles: Article[];
@@ -43,7 +42,6 @@ export function ArticlesPage({ articles }: ArticlesPageProps) {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-black">
-      <LeftNav articles={articles} />
       <div className="flex min-w-12 justify-center columns-1 mr-3.5">
         <div className="flex flex-col gap-2.5">
           <select
